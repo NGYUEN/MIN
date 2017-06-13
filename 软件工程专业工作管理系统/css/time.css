@@ -1,0 +1,46 @@
+body{
+    font-size: 30px;
+}
+#time{
+    position: relative;
+    width: 300px;
+    margin: auto;
+}
+.subject{
+    width: 200px;
+    height: 30px;
+    font-size: 24px;
+}
+.timewrapper{
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+}
+.subject{
+    width: 200px;
+    height: 35px;
+    /*font-size: 20px;*/
+    border-radius: 5px;
+}
+.span{
+    font-size: 25px;
+}
+.login-btn a{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    background: #25bd45;
+    border-radius: 10px;
+    cursor: pointer;
+    /*top: 70%;*/
+}
+.login-btn.left{
+    margin-right: 150px;
+}
+.login-btn.right{
+    margin-left: 80px;
+}

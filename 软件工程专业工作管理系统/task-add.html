@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加任务</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!-- 让IE低版本浏览器兼容html5元素。-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="H-ui_v3.0/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="H-ui_v3.0/lib/respond.min.js"></script>
+    <script type="text/javascript" src="H-ui_v3.0/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <!-- 解决IE6png透明-->
+    <!--[if IE 6]>
+    <script type="text/javascript" src="H-ui_v3.0/lib/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('.pngfix,.icon');</script>
+    <![endif]-->
+    <!-- 时间插件-->
+    <link href="time/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="time/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <!-- 结束-->
+    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/lib/Hui-iconfont/1.0.8/iconfont.css"/>
+    <style>
+        input.input-text{
+            height: 39px;
+        }
+    </style>
+</head>
+<body>
+<article class="page-container">
+    <form class="form form-horizontal" id="form-user-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>任务名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>任务开始时间：</label>
+            <div class="control-group" style="margin-bottom: 15px;">
+                <div class="controls input-append date form_datetime"  data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd p HH:ii" data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" readonly>
+                    <span class="add-on"><i class="icon-remove"></i></span>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
+                <input type="hidden" value="" /><br/>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>任务结束时间：</label>
+            <div class="control-group" style="margin-bottom: 15px;">
+                <div class="controls input-append date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd p HH:ii"  data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" readonly>
+                    <span class="add-on"><i class="icon-remove"></i></span>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
+                <input type="hidden" value="" /><br/>
+            </div>
+        </div>
+        <div class="row cl" style="height: 39px;border-radius: 0">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>任务类型：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+			<select class="select" name="userTitles" size="1">
+                <option value ="0">回复类任务</option>
+                <option value ="1">文件类任务</option>
+            </select>
+			</span></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">任务描述：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="" cols="300" rows="150" class="textarea"  placeholder="描述一下任务...100个字符以内" dragonfly="true" onKeyUp="$.Huitextarealength(this,100)"></textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+                <input class="btn btn-primary radius" type="reset" value="&nbsp;&nbsp;重置&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+<!--时间插件-->
+<script type="text/javascript" src="time/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="time/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="time/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="time/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+</body>
+</html>

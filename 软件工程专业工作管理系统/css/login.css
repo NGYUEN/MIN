@@ -1,0 +1,79 @@
+.header{
+    height: 60px;
+    width: 100%;
+    background: #3a5364;
+    color: #d5d3f8;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+.loginWrapper{
+    height: 600px;
+    width: 100%;
+    background:url(../img/login-bg.jpg);
+    background-size: 1400px;
+    background-repeat: no-repeat;
+}
+.login-form{
+    width: 400px;
+    height: 240px;
+    background: #5a7688;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -200px;
+    text-align: center;
+}
+.login-form img{
+    position: absolute;
+    left: 20%;
+    cursor: pointer;
+}
+.login-form input{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+}
+.login-img-1,.login-input-1{
+    top: 40px;
+}
+.login-img-2,.login-input-2{
+    top: 100px;
+}
+.login-btn a{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    background: #25bd45;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 70%;
+}
+.login-btn.left{
+    margin-right: 150px;
+}
+.login-btn.right{
+    margin-left: 80px;
+}
+.footer{
+    height: 60px;
+    width: 100%;
+    background: #3a5364;
+    color: #d5d3f8;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
