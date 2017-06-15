@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui.admin/css/H-ui.admin.css" />
     <link rel="stylesheet" type="text/css" href="H-ui_v3.0/lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="css/page.css"/>
 </head>
 <body>
 <nav class="breadcrumb">
@@ -41,58 +42,74 @@
     </div>
     <table class="table table-border table-bordered table-bg">
         <thead>
-        <tr>
-            <th scope="col" colspan="7">用户列表</th>
-        </tr>
-        <tr class="text-c">
-            <th width="30"><input type="checkbox" name="" value=""></th>
-            <th width="40">ID</th>
-            <th width="100">用户名</th>
-            <th width="150">手机</th>
-            <th width="150">邮箱</th>
-            <th width="110">职称</th>
-            <th width="150">操作</th>
-        </tr>
+            <tr>
+                <th scope="col" colspan="8">用户列表</th>
+            </tr>
+            <tr class="text-c">
+                <th width="30"><input type="checkbox" name="" value=""></th>
+                <th width="40">ID</th>
+                <th width="60">职工号</th>
+                <th width="100">用户名</th>
+                <th width="150">手机</th>
+                <th width="150">邮箱</th>
+                <th width="110">职称</th>
+                <th width="150">操作</th>
+            </tr>
         </thead>
         <tbody>
-        <tr class="text-c">
-            <td><input type="checkbox" value="1" name=""></td>
-            <td>1</td>
-            <td>张三</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>讲师</td>
-            <td class="td-manage">
-                <a title="编辑" href="javascript:;" onclick="user_edit('编辑用户','user-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                <a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
-            </td>
-        </tr>
-        <tr class="text-c">
-            <td><input type="checkbox" value="2" name=""></td>
-            <td>2</td>
-            <td>李四</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>副教授</td>
-            <td class="td-manage">
-                <a title="编辑" href="javascript:;" onclick="user_edit('编辑用户','user-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                <a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
-            </td>
-        </tr>
-        <tr class="text-c">
-            <td><input type="checkbox" value="3" name=""></td>
-            <td>2</td>
-            <td>王五</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>副教授</td>
-            <td class="td-manage">
-                <a title="编辑" href="javascript:;" onclick="user_edit('编辑用户','user-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                <a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
-            </td>
-        </tr>
+            <tr class="text-c">
+                <td><input type="checkbox" value="1" name=""></td>
+                <td>1</td>
+                <td>001</td>
+                <td>张三</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>讲师</td>
+                <td class="td-manage">
+                    <a title="编辑" href="javascript:;" onclick="user_edit('编辑用户','user-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                </td>
+            </tr>
+            <tr class="text-c">
+                <td><input type="checkbox" value="2" name=""></td>
+                <td>2</td>
+                <td>002</td>
+                <td>李四</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>副教授</td>
+                <td class="td-manage">
+                    <a title="编辑" href="javascript:;" onclick="user_edit('编辑用户','user-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                </td>
+            </tr>
+            <tr class="text-c">
+                <td><input type="checkbox" value="3" name=""></td>
+                <td>2</td>
+                <td>003</td>
+                <td>王五</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>副教授</td>
+                <td class="td-manage">
+                    <a title="编辑" href="javascript:;" onclick="user_edit('编辑用户','user-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                </td>
+            </tr>
         </tbody>
     </table>
+    <div class="page">
+        <ul class="pageMenu clearfix">
+            <li class="firstPage radius">首页</li>
+            <li class="prevPage radius"> <i class="Hui-iconfont">&#xe678;</i>上一页 </li>
+            <li class="nextPage radius"> 下一页 <i class="Hui-iconfont">&#xe67a;</i> </li>
+            <li class="lastPage radius">尾页</li>
+            <li class="last" style="font-size: 14px;">
+                共<span class="totalPage">&nbsp;1&nbsp;</span>页，跳转至 <input type="number" class="keuInput radius" value="1">
+                <button type="button" class="btn btn-success radius">确定</button>
+            </li>
+        </ul>
+    </div>
 </div>
 <script type="text/javascript" src="H-ui_v3.0/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="H-ui_v3.0/lib/layer/2.4/layer.js"></script>

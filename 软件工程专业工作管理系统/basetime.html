@@ -34,23 +34,30 @@
 <body>
 <article class="page-container">
     <form class="form form-horizontal" id="form-user-add">
-        <div class="row cl" style="height: 39px;border-radius: 0">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学期：</label>
-            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select class="select" name="userTitles" size="1">
-                <option value="0">2014-2015-01</option>
-                <option value="1">2014-2015-02</option>
-                <option value="2">2015-2016-01</option>
-                <option value="3">2015-2016-02</option>
-                <option value="4">2016-2017-01</option>
-                <option value="5">2016-2017-02</option>
-                <option value="6">2017-2018-01</option>
-                <option value="7">2017-2018-02</option>
-            </select>
-			</span></div>
+        <!--<div class="row cl" style="height: 39px;border-radius: 0">-->
+            <!--<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学期：</label>-->
+            <!--<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">-->
+			<!--<select class="select" name="userTitles" size="1">-->
+                <!--<option value="0">2014-2015-01</option>-->
+                <!--<option value="1">2014-2015-02</option>-->
+                <!--<option value="2">2015-2016-01</option>-->
+                <!--<option value="3">2015-2016-02</option>-->
+                <!--<option value="4">2016-2017-01</option>-->
+                <!--<option value="5">2016-2017-02</option>-->
+                <!--<option value="6">2017-2018-01</option>-->
+                <!--<option value="7">2017-2018-02</option>-->
+            <!--</select>-->
+			<!--</span></div>-->
+        <!--</div>-->
+        <div class="row cl" style="color: #ff1d04;">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>添加新学期：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="">
+                (示例：2014-2015-01代表2014-2015学年上半学期)
+            </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学期基点时间：</label>
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>设置学期基点时间：</label>
             <div class="control-group" style="margin-bottom: 15px;">
                 <div class="controls input-append date form_datetime"  data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd p HH:ii" data-link-field="dtp_input1">
                     <input size="16" type="text" value="" readonly>
