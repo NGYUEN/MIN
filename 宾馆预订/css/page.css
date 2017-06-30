@@ -1,0 +1,46 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page {
+    text-align: center;
+    width: 100%;
+}
+
+.pageMenu {
+    display: inline-block;
+}
+
+.pageMenu li {
+    border: solid thin #ddd;
+    margin: 3px;
+    float: left;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pageMenu li.firstPage {
+    background: #cdccd2;
+}
+.pageMenu li.lastPage {
+    background: #cdccd2;
+}
+
+.pageMenu li.last {
+    background: transparent;
+    border: 0;
+    position: relative;
+    top: -4px;
+}
+
+.page .keuInput {
+    padding: 0 5px;
+    width: 30px;
+    border: solid thin #ddd;
+    height: 29px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+}
