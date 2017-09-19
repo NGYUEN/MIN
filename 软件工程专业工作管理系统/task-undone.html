@@ -5,19 +5,19 @@
     <title>未完成任务</title>
     <!-- 让IE低版本浏览器兼容html5元素。-->
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="H-ui_v3.0/lib/html5shiv.js"></script>
-    <script type="text/javascript" src="H-ui_v3.0/lib/respond.min.js"></script>
-    <script type="text/javascript" src="H-ui_v3.0/lib/PIE_IE678.js"></script>
+    <script type="text/javascript" src="lib/html5shiv.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <script type="text/javascript" src="lib/PIE_IE678.js"></script>
     <![endif]-->
     <!-- 解决IE6png透明-->
     <!--[if IE 6]>
-    <script type="text/javascript" src="H-ui_v3.0/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('.pngfix,.icon');</script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui/css/H-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui.admin/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/lib/Hui-iconfont/1.0.8/iconfont.css" />
-    <link rel="stylesheet" type="text/css" href="H-ui_v3.0/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="css/page.css"/>
     <style>
         .upload{
@@ -113,12 +113,11 @@
             <td>文件类任务</td>
             <td>巴拉巴拉</td>
             <td class="td-manage">
-                <a href="javascript:;" class="btn btn-primary radius">
+                <a href="javascript:;" class="btn btn-primary radius ml-5" onclick="task_reply('任务回复','reply.html','1','600','330')" style="text-decoration:none">
                     <i class="Hui-iconfont">&#xe647;</i> 回复任务
                 </a>
-                <a href="javascript:;" class="btn btn-success radius">
-                    <i class="Hui-iconfont">&#xe645;</i>
-                    <input type="file" class="upload"/>上传文件
+                <a href="javascript:;" class="btn btn-success radius ml-5" onclick="task_uploading('任务文件上传','uploading.html','1','350','200')" style="text-decoration:none">
+                    <i class="Hui-iconfont">&#xe645;</i>上传文件
                 </a>
             </td>
         </tr>
@@ -154,39 +153,19 @@
         </ul>
     </div>
 </div>
-<script type="text/javascript" src="H-ui_v3.0/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="H-ui_v3.0/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="H-ui_v3.0/static/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="H-ui_v3.0/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
 
-<!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="H-ui_v3.0/lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" src="H-ui_v3.0/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="H-ui_v3.0/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
-    /*任务-增加*/
-    function task_add(title,url,w,h){
+    function task_reply(title,url,id,w,h){
         layer_show(title,url,w,h);
     }
-    /*任务-删除*/
-    function task_del(obj,id){
-        layer.confirm('确认要删除吗？',function(index){
-            $.ajax({
-                type: 'POST',
-                url: '',
-                dataType: 'json',
-                success: function(data){
-                    $(obj).parents("tr").remove();
-                    layer.msg('已删除!',{icon:1,time:1000});
-                },
-                error:function(data) {
-                    console.log(data.msg);
-                },
-            });
-        });
-    }
-    /*任务-编辑*/
-    function task_edit(title,url,id,w,h){
+    function task_uploading(title,url,id,w,h){
         layer_show(title,url,w,h);
     }
 </script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <!--<base href="<%=basePath%>">-->
+        <title>用户列表</title>
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+        <!-- 让IE低版本浏览器兼容html5元素。-->
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="lib/html5shiv.js"></script>
+        <script type="text/javascript" src="lib/respond.min.js"></script>
+        <script type="text/javascript" src="lib/PIE_IE678.js"></script>
+        <![endif]-->
+        <!-- 解决IE6png透明-->
+        <!--[if IE 6]>
+        <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script>DD_belatedPNG.fix('.pngfix,.icon');</script>
+        <![endif]-->
+        <!-- 时间插件-->
+        <link href="time/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="time/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+        <!-- 结束-->
+        <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css"/>
+        <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css"/>
+        <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin"/>
+        <style>
+            input.input-text{
+                height: 39px;
+            }
+        </style>
+
+    </head>
+    <!-- 以上全是复制的 -->
+    <body>
+        <table class="table table-border table-bordered table-bg">
+            <thead>
+            <tr>
+                <th scope="col" colspan="4">用户列表</th>
+            </tr>
+            <tr class="text-c">
+                <th width="30"><input type="checkbox" name="" value=""></th>
+                <th width="60">职工号</th>
+                <th width="100">姓名</th>
+                <th width="100">你要干什么</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${pageInfo.list }" var="user" varStatus="status">
+                <tr class="text-c">
+                    <td><c:if test="${user.role!='superadmin' }"><input type="checkbox" value="${user.userid }" name="userid"></c:if></td>
+                    <td> ${user.userid }</td>
+                    <td>${user.username }</td>
+                    <td></td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+        <form>
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-sm-9">
+                    <c:forEach var="user" items="${users}">
+                        <input type="checkbox" name="usernames" value="${user.username}-${user.userid}">${user.username}
+                    </c:forEach>
+                    <c:if test="${usermsg!=null }">
+                        <font color="red">${usermsg}</font>
+                    </c:if>
+                </div>
+
+            </div>
+            <div class="row cl">
+                <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                    <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;" onclick="users()">
+                    <input class="btn btn-primary radius" type="reset" value="&nbsp;&nbsp;重置&nbsp;&nbsp;">
+                </div>
+            </div>
+        </form>
+
+    </article>
+    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function users() {
+            var obj=document.getElementsByName('usernames'); //选择所有name="'usernames'"的对象，返回数组
+            //取到对象数组后，我们来循环检测它是不是被选中
+            var s= new Array();
+            var jkryname='';
+            var jkryid='';
+            for(var i=0; i<obj.length; i++){
+                if(obj[i].checked){
+                    s=obj[i].value.split("-");
+                    jkryname+=s[0]+",";
+                    jkryid+=s[1]+",";
+                }//如果选中，将value添加到变量s中
+            }
+            jkryname=jkryname.substring(0,jkryname.length-1);
+            jkryid=jkryid.substring(0,jkryid.length-1);
+
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.$("#jkryname").val(jkryname);
+            parent.$("#jkryid").val(jkryid);
+            parent.layer.close(index);
+
+
+        }
+
+
+
+    </script>
+
+    </body>
+    </html>
